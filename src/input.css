@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+     
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: #2d2c4a;
+    color: #fff;
+    bottom:50px;
+     transform: translateX(-32px);
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+ .svg:hover {
+    color:white;
+ }
+ .icon:hover {
+    fill: white;
+  }
+
+
+  :root{
+    --chart-height: 250px;
+    --chart-thickness: 40px;
+    --score-background-color: grey;
+  } 
+
+  .score{
+    background-color:#14102C;
+    padding: 10px;
+    margin: auto;
+  }
+  
+  .pie-chart {
+    border-radius: 50%;
+    background: radial-gradient(
+        circle closest-side,
+        transparent 100%,
+        var(--score-background-color) 0
+      ), conic-gradient(
+        from 0,
+        red 20%,
+        red var(--incorrect-notes-percent),
+        blue 50%,
+        blue  var(--incorrect-notes-percent),
+        pink calc(var(--incorrect-notes-percent) + var(--close-notes-percent)),
+        green 100%
+      );
+   
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: var(--chart-height);
+    width: var(--chart-height);
+  }
+  
+  .inner{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #14102C;
+    height: calc(var(--chart-height) - var(--chart-thickness));
+    width: calc(var(--chart-height) - var(--chart-thickness));
+  }
+  
+.svg-h:hover{
+  fill:#2563eb;
+} 
+
+.footer-main {
+  margin-top: -143px;
+}
+
+.footer-page p:hover {
+
+  color: #2563eb;
+  cursor: pointer; 
+}  
+
+
+
